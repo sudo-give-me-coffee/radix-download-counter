@@ -13,3 +13,18 @@ jobs:
             cp ../download-counter.log website/download-counter/download-counter.log
             git config --global user.email "rauldipeas@mail.com";git config --global user.name "Raul Dipeas"
             git add .; git commit -m "CircleCI Auto Build";git push -u origin master
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - deploy
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - coverage
