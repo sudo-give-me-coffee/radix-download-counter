@@ -10,4 +10,5 @@ job:
     - cp ../download-counter.log website/download-counter/download-counter.log
     - git config --global user.email "rauldipeas@mail.com";git config --global user.name "Raul Dipeas"
     - git remote set-url origin git@github.com:rauldipeas/radix-website.git
+    - cat $GITHUB_ACCESS_TOKEN
     - git add .; git commit -m "GitLab-CI Auto Build";git push -u origin master
