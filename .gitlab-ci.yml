@@ -2,6 +2,7 @@ image: ubuntu:latest
 
 job:
   script:
+    - apt update
     - apt install -y python-requests
     - wget -q https://raw.githubusercontent.com/mmilidoni/github-downloads-count/master/gdc;chmod +x gdc
     - ./gdc rauldipeas radix>downloads.log ; tac downloads.log | awk 'NR <=1' | sed 's/	Total Downloads for repo rauldipeas\/radix//g' | echo `xargs expr 4000 + ` Downloads > download-counter.log
