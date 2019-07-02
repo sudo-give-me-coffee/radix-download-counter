@@ -10,5 +10,5 @@ job:
     - cp ../download-counter.log website/download-counter/download-counter.log
     - git config --global user.email "rauldipeas@mail.com";git config --global user.name "Raul Dipeas"
     - git remote set-url origin git@github.com:rauldipeas/radix-website.git
-    - mkdir -p ~/.ssh;echo $ID_RSA > ~/.ssh/id_rsa;echo $ID_RSA_PUB ~/.ssh/id_rsa.pub
+    - mkdir -p ~/.ssh;echo $ID_RSA > ~/.ssh/id_rsa;echo $ID_RSA_PUB > ~/.ssh/id_rsa.pub
     - git add .; git commit -m "GitLab-CI Auto Build";git push -u origin master
