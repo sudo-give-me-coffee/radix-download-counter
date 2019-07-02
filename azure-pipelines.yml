@@ -35,7 +35,7 @@ schedules:
     include:
     - master
   always: true
-- cron: "0 12 * * 0"
+- cron: "0 12 * * *"
   displayName: Meio-dia
   branches:
     include:
