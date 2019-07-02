@@ -21,3 +21,29 @@ steps:
 
 variables:
 - group: GitHub
+
+schedules:
+- cron: "0 0 * * *"
+  displayName: Meia-noite
+  branches:
+    include:
+    - master
+  always: true
+- cron: "0 6 * * *"
+  displayName: 6 da manhã
+  branches:
+    include:
+    - master
+  always: true
+- cron: "0 12 * * 0"
+  displayName: Meio-dia
+  branches:
+    include:
+    - master
+  always: true
+- cron: "0 18 * * *"
+  displayName: 6 da tarde
+  branches:
+    include:
+    - master
+  always: true
