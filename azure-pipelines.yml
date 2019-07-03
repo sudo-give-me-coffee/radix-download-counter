@@ -17,7 +17,7 @@ steps:
       git config --global user.email "rauldipeas@mail.com";git config --global user.name "Raul Dipeas"
       git add .; git commit -m "Azure Pipeline Auto Build"
       git push http://rauldipeas:$GITHUB_ACCESS_TOKEN@github.com/rauldipeas/radix-website.git HEAD:master
-  displayName: 'Download counter'
+    displayName: 'Download counter'
 
 variables:
   - group: GitHub
